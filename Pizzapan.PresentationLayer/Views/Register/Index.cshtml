@@ -3,7 +3,7 @@
     ViewData["Title"] = "Index";
 }
 
-<link href="/lib/boostrap/dist/css/boostrap.min.cs" rel="stylesheet"/>
+<link href="~/lib/boostrap/dist/css/boostrap.min.cs" rel="stylesheet"/>
 <form method="post">
     <div class="container">
         <br><br />
@@ -15,7 +15,7 @@
         <br />
         <label>Kullanıcı Adı</label>
         <input type="text" class="form-control" asp-for="Username" />
-        <br />
+        <br />w
         <label>Email Adresiniz</label>
         <input type="text" class="form-control" asp-for="Email" />
         <br />
@@ -26,5 +26,6 @@
         <input type="password" class="form-control" asp-for="ConfirmPassword" />
         <br />
         <button class="btn btn-primary">Kayıt Ol</button>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
     </div>
 </form>
