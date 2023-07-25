@@ -270,6 +270,33 @@ namespace Pizzapan.DataAccessLayer.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("Pizzapan.EntityLayer.Concrete.ContactUs", b =>
+                {
+                    b.Property<int>("ContactUsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Adress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OpeningHours")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContactUsID");
+
+                    b.ToTable("ContactUs");
+                });
+
             modelBuilder.Entity("Pizzapan.EntityLayer.Concrete.Discount", b =>
                 {
                     b.Property<int>("DiscountID")
@@ -369,6 +396,27 @@ namespace Pizzapan.DataAccessLayer.Migrations
                     b.HasKey("ProductImageID");
 
                     b.ToTable("ProductImages");
+                });
+
+            modelBuilder.Entity("Pizzapan.EntityLayer.Concrete.SocialMedia", b =>
+                {
+                    b.Property<int>("SocialMediaID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("SocialMediaIcon")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SocialMediaName")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SocialMediaUrl")
+                        .HasColumnType("int");
+
+                    b.HasKey("SocialMediaID");
+
+                    b.ToTable("SocialMedias");
                 });
 
             modelBuilder.Entity("Pizzapan.EntityLayer.Concrete.Testimonial", b =>

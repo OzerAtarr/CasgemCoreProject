@@ -1,0 +1,40 @@
+﻿@model List<Pizzapan.EntityLayer.Concrete.Category>
+
+
+<div class="agileits-services  py-5" id="menu">
+    <div class="container py-md-5">
+        <div class="title-content text-center">
+            <h6 class="sub-title">Meni</h6>
+            <h3 class="title-big">Afiyet olsun</h3>
+        </div>
+        <div class="pt-lg-5 pt-4">
+            <div class="row menu-body">
+                <!-- Section starts: Appetizers -->
+                <!-- Item starts -->
+                @foreach (var group in Model)
+                {
+                    <div class="col-lg-6 menu-section pr-lg-5">
+                        <h3 class="menu-section-title">@group.CategoryName</h3>
+                        @foreach (var item in group.Products)
+                        {
+                            <div class="menu-item">
+                                <div class="row border-dot no-gutters">
+                                    <div class="col-8 menu-item-name">
+                                        <h6>@item.Name</h6>
+                                    </div>
+                                    <div class="col-4 menu-item-price text-right">
+                                        <h6>@item.Price</h6>
+                                    </div>
+                                </div>
+                                <div class="menu-item-description">
+                                    <p>@item.Description</p>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

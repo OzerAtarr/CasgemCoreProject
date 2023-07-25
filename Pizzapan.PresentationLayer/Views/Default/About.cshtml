@@ -1,0 +1,33 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <!--header-->
+    @await Component.InvokeAsync("_NavbarPartial")
+    <!--/header-->
+    <!-- Domain Modal -->
+    @await Component.InvokeAsync("_ContactUsPartial")
+    <!-- //Domain modal -->
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/Default/Index">Ana Sayfa</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Hakkında</li>
+            </ul>
+        </div>
+    </section>
+
+    @await Component.InvokeAsync("_OurTeamPartial")
+    @await Component.InvokeAsync("_AboutPartial")
+    <!-- footers 20 -->
+    <!-- move top -->
+    @await Component.InvokeAsync("_ScriptPartial")
+</body>
+
+</html>

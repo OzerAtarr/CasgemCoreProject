@@ -1,0 +1,71 @@
+﻿@model Pizzapan.EntityLayer.Concrete.Contact
+
+<section class="w3l-contact-11 py-5">
+    <div class="contacts-main py-lg-5 py-md-4">
+        <div class="contant11-top-bg">
+            <div class="container">
+                <div class="title-content text-center">
+                    <h6 class="sub-title">İletişim</h6>
+                    <h3 class="title-big">Bize Ulaşın</h3>
+                </div>
+                <div class="d-grid contact section-gap mt-lg-5 mt-4">
+                    <div class="contact-info-left d-grid text-center">
+                        <div class="contact-info">
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            <h4>Adres</h4>
+                            <p>@ViewBag.address</p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <h4>İletişim</h4>
+                            <p><a href="tel: @ViewBag.phone">@ViewBag.phone</a></p>
+                            <p><a href="mailto:@ViewBag.email" class="email">@ViewBag.email</a></p>
+                        </div>
+                        <div class="contact-info">
+                            <span class="fa fa-clock-o" aria-hidden="true"></span>
+                            <h4>Çalışma Saatleri</h4>
+
+                            <p> @ViewBag.openingHours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-41-mian section-gap mt-5">
+            <div class="container">
+                <div class="d-grid align-form-map">
+
+                    <div class="form-inner-cont">
+                        <form action="/Contact/AddMessage" method="post" class="signin-form">
+                            <div class="form-input">
+                                <label for="w3lName">Ad Soyad</label>
+                                <input type="text" name="Name" placeholder="" />
+                            </div>
+                            <div class="form-input">
+                                <label for="w3lSender">Email</label>
+                                <input type="email" name="Email" placeholder="" required="" />
+                            </div>
+                            <div class="form-input">
+                                <label for="w3lMessage">Konu</label>
+                                <input type="text" name="Subject" placeholder="" required="" />
+                            </div>
+                            <div class="form-input">
+                                <label for="w3lMessage">Mesaj</label>
+                                <textarea placeholder="" name="Message" required=""></textarea>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-style btn-primary">Gönder</button>
+
+                        </form>
+                    </div>
+
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12220.021755255204!2d32.898792!3d40.030658!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40820811e6e10549%3A0x9c12652c44346d8a!2zw4dhbMSxxZ9tYSB2ZSBTb3N5YWwgR8O8dmVubGlrIEXEn2l0aW0gVmUgQXJhxZ90xLFybWEgTWVya2V6aQ!5e0!3m2!1str!2str!4v1690210167819!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+

@@ -1,0 +1,11 @@
+﻿@model List<SocialMedia>
+<div class="widget-social-icons mt-sm-5 mt-4">
+    <h5 class="widget-title">Follow Us</h5>
+    <ul class="icon-rounded">
+        @foreach(var item in Model)
+        {
+            <li><a href="@item.SocialMediaUrl" target="_blank"><span class="@item.SocialMediaIcon"></span></a></li>
+
+        }
+    </ul>
+</div>

@@ -1,8 +1,14 @@
 ﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
 @{
     Layout = null;
 }
-<link href="/lib/boostrap/dist/css/boostrap.min.cs" rel="stylesheet" />
+<link href="~/lib/boostrap/dist/css/boostrap.min.cs" rel="stylesheet" />
 <div class="container">
     <form method="post">
         <label>Kullanıcı Adınız</label>
@@ -14,3 +20,4 @@
         <button class="btn btn-primary">Giriş Yap</button>
     </form>
 </div>
+
