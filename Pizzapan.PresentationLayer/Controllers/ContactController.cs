@@ -26,5 +26,10 @@ namespace Pizzapan.PresentationLayer.Controllers
             var values = _contactService.TGetContactBySubjectWithTesekkur();
             return View(values);
         }
+        public IActionResult MessageDetailsContact(int id)
+        {
+            var values = _contactService.TGetByID(id);
+            return View(values);
+        }
     }
 }

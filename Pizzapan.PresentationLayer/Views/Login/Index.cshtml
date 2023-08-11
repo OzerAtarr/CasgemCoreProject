@@ -2,15 +2,16 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 @{
     Layout = null;
 }
 <link href="~/lib/boostrap/dist/css/boostrap.min.cs" rel="stylesheet" />
+
 <div class="container">
     <form method="post">
+
         <label>Kullanıcı Adınız</label>
         <input type="text" class="form-control" asp-for="Username" />
         <br />

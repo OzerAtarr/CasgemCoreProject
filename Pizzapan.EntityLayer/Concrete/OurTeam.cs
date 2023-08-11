@@ -15,6 +15,6 @@ namespace Pizzapan.EntityLayer.Concrete
         public string Facebook { get; set; }
         public string Twitter { get; set; }
         public string ImageUrl { get; set; }
-        public string Status { get; set; }
+        public bool Status { get; set; }
     }
 }

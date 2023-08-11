@@ -5,31 +5,33 @@
 }
 
 <h1>Kod Listesi</h1>
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>İndirim Kodu</th>
+            <th>Kullanım</th>
+            <th>Son Kullanma</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            if (item.EndingDate < DateTime.Now)
+            {
+                <tr style="background-color:orangered">
+                    <td>@item.DiscountCode</td>
+                    <td>@item.DiscountCount</td>
+                    <td>@(((DateTime)item.EndingDate).ToString("dd-MMM-yyyy"))</td>
+                </tr>
+            }
+            else
+            {
+                <tr style="background-color:lightgreen">
+                    <td>@item.DiscountCode</td>
+                    <td>@item.DiscountCount</td>
+                    <td>@(((DateTime)item.EndingDate).ToString("dd-MMM-yyyy"))</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
 
-<table>
-    <tr>
-        <th>İndirim Kodu</th>
-        <th>Kullanım</th>
-        <th>Son Kullanma</th>
-    </tr>
-    @foreach(var item in Model)
-    {
-        if(item.EndingDate<DateTime.Now)
-        {
-            <tr style="background-color:orangered">
-                <td>@item.DiscountCode</td>
-                <td>@item.DiscountCount</td>
-                <td>@(((DateTime)item.EndingDate).ToString("dd-MMM-yyyy"))</td>
-            </tr>
-        }
-        else
-        {
-            <tr style="background-color:lightgreen">
-                <td>@item.DiscountCode</td>
-                <td>@item.DiscountCount</td>
-                <td>@(((DateTime)item.EndingDate).ToString("dd-MMM-yyyy"))</td>
-            </tr>
-        }
-    }
-</table>
 
